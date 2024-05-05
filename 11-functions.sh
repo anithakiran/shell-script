@@ -1,6 +1,13 @@
 #!/bin/bash
 
-UserID=$(id -u)
+USERID=$(id -u)
+
+if [ $? -ne 0 ]
+then    
+    echo "installation is failure"
+else
+    echo "installation is successfull"
+fi
 
 if [ $UserID -ne 0 ]
 then 
@@ -12,5 +19,4 @@ fi
 
 dnf install mysql -y
 echo "is script processing?"
-
 
