@@ -9,7 +9,7 @@ LOGFILE = /tmp/$SCRIPT_NAME-$TIMESTAMP.log
 USERID=$(id -u)
 
 VALIDATE() {
-if [ $? -ne 0 ]
+if [ $1 -ne 0 ]
 then    
     echo "installation is failure"
 else
@@ -17,7 +17,7 @@ else
 fi
 }
 
-if [ $UserID -ne 0 ]
+if [ $USERID -ne 0 ]
 then 
     echo "please run this script with root access"
     exit 1
