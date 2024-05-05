@@ -13,7 +13,7 @@ N="\e[0m"
 echo "script started executing at : $TIMESTAMP"
 
 VALIDATE() {
-if [ $? -ne 0 ]
+if [ $1 -ne 0 ]
 then    
     echo -e "installation is $R failure $N "
 else
