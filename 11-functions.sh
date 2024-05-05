@@ -2,12 +2,14 @@
 
 USERID=$(id -u)
 
-if [ $? -ne 0 ]
-then    
-    echo "installation is failure"
-else
-    echo "installation is successfull"
-fi
+VALIDATE() {
+    if [ $1 -ne 0 ]
+    then    
+        echo "installation is failure"
+    else
+        echo "installation is successfull"
+    fi
+}
 
 if [ $UserID -ne 0 ]
 then 
@@ -17,6 +19,8 @@ else
     echo "your are super user"
 fi
 
-dnf install mysql -y
-echo "is script processing?"
+dnf install mysql -y 
+VALIDATE $? "Installing mysql"
 
+dnf install git -y
+VALIDATE $? "Installing git"
