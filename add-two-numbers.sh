@@ -1,23 +1,10 @@
-#!/bin/bash 
-# The Shebang
+#!/bin/bash
 
-if [ $# -ne 2 ] 
-# If two Inputs are not received from Standard Input
+if [ $# -ne 2 ]
+then
+    echo "please only two numbers only"
+    echo "please enter values has shown ---> script_name.sh  x y"
+    echo "so x and y values will be added and sum values be given"
+fi
 
-then 
-# then execute the below statements
-
-    echo "Usage - $0   x    y" 
-    # print on standard output, how-to use the script (Usage - ./1.sh   x    y )
-
-    echo "        Where x and y are two nos for which I will print sum" 
-    # print on standard output, “Where x and y are two nos for which I will print sum ”
-
-    exit 1 
-    # Leave shell in Error Stage and before the task was successfully carried out.
-
-fi 
-# End of the if Statement.
-
-    echo "Sum of $1 and $2 is `expr $1 + $2`"
-    # If the above condition was false and user Entered two numbers as a command Line Argument
+echo "sum of two numbers is `expr $1 + $2`"
