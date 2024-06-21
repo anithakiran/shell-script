@@ -7,4 +7,4 @@ then
     echo "so x and y values will be added and sum values be given"
 fi
 
-echo "sum of two numbers is $($1 + $2)"
+echo "sum of two numbers is $(($1 + $2))"
