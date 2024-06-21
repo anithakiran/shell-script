@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-if [ $# -ne 2]
+if [ $# -ne 2 ]
 then
     echo "please only two numbers only"
     echo "please enter values has shown ---> script_name.sh  x y"
