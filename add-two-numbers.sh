@@ -20,5 +20,4 @@ fi
 # End of the if Statement.
 
     echo "Sum of $1 and $2 is `expr $1 + $2`"
-    # If the above condition was false and user Entered two numbers as a command Line Argument,   
-       it will show the sum of the entered numbers.
+    # If the above condition was false and user Entered two numbers as a command Line Argument
