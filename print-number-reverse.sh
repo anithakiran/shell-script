@@ -12,6 +12,6 @@ sd=`expr $n % 10`
 rev=`expr $rev \* 10 + $sd`
 n=`expr $n / 10`
 done
-echo number is $rev
+echo reverse number is $rev
 
 
