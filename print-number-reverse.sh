@@ -6,6 +6,7 @@ read n
 
 sd=0
 rev=0
+
 while [ $n -gt 0 ]
 do 
 sd=`expr $n % 10`
