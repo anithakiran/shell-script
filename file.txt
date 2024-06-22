@@ -5,3 +5,11 @@ The line keyword in a shell script is used to
  It is a special variable that is automatically set by the shell when the script is executed. 
  
  The value of the line keyword is an integer that represents the line number of the current line of the script.
+
+
+
+ The line keyword in a shell script is used to display the current line number of the script.
+ 
+  It is a special variable that is automatically set by the shell when the script is executed. 
+  
+  The value of the line keyword is an integer that represents the line number of the current line of the script.
