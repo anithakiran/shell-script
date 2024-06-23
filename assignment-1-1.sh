@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -p Enter the filename
+echo  Enter the filename
 read filename
 
 if [ ! -f "$filename" ] 
