@@ -26,7 +26,8 @@ for word in "${!word_counts[@]}";
 do
 echo "$word: ${word_counts[$word]}"
 done
-
+echo " "
+echo " "
 top_words=$(for word in "${!word_counts[@]}"; do
     echo "$word ${word_counts[$word]}"
 done | sort -k2 -nr | head -n 5)
