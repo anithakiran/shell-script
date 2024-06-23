@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-if [$USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo "please run the script with root access"
     exit 1
@@ -14,7 +14,7 @@ dnf install mysql -y
 
 echo "Is script still processing ?..." 
 
-if [$? -ne 0 ]
+if [ $? -ne 0 ]
 then    
     echo "installation of mysql is failure"
     exit 1
