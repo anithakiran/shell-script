@@ -15,7 +15,7 @@ while IFS= read -r line;
 do
 clean_line=$(echo "$line" | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]')
 words=($clean_line)
-for word in "${(words[@])}";
+for word in "${words[@]}";
 do
 word_counts[$word]=$((word_counts[$word] + 1))
 done
