@@ -16,7 +16,7 @@ fi
 
 FILES=$(find $soruce_directory -name "*.log" -mtime +14)
 
-while IFS=READ -r line
+while IFS= read -r line
 do
     echo "deleting file: $line"
     rm -rf $line
