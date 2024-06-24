@@ -7,11 +7,11 @@ MESSAGE=" "
 while IFS= read -r line
 do
     
-    USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
-    FOLDER=$(echo $line | awk -F " " '{print $NF}')
-    if [ $USAGE -ge $DISK_THRESHOULD]
+    USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1 )
+    FOLDER=$(echo $line | awk -F " " '{print $NF}' )
+    if [ $USAGE -ge $DISK_THRESHOULD ]
     then
-         MESSAGE+= "$FOLDER is more than  $DISK_THRESHOULD ,current usage: $USAGE \n"
+         MESSAGE+= "$FOLDER is more than  $DISK_THRESHOULD, current usage: $USAGE \n"
     fi
 done <<< $DISK_USAGE
 
