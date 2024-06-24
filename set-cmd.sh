@@ -3,11 +3,11 @@
 set -e
 
 
-trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+#trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 
-failure(){
-    echo "failed at $1:$2"
-}
+#failure(){
+ #   echo "failed at $1:$2"
+#}
 
 USERID=$(id -u)
 
