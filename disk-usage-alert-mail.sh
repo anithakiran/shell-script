@@ -10,8 +10,8 @@ do
     FOLDER=$(echo $line |awk -f " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOULD]
     then
-         MESSAGE+= "$FOLDER is more than  $DISK_THRESHOULD" ,current usage: $USAGE \n"
+         MESSAGE+= "$FOLDER is more than  $DISK_THRESHOULD ,current usage: $USAGE \n"
     fi
 done <<< $DISK_USAGE
 
-echo -e " Message : $MESSAGE"
+echo -e "Message : $MESSAGE"
