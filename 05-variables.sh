@@ -1,11 +1,9 @@
 #!/bin/bash
 
-echo "please enter user name :: "
+echo -n "please enter user name :: " 
+read  USERNAME 
 
-read -s USERNAME 
-
-echo "please enter password :: "
-
+echo -n "please enter password :: "  
 read -s PASSWORD
 
 echo "USERNAME is : $USERNAME"
