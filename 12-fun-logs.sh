@@ -11,9 +11,9 @@ USERID=$(id -u)
 VALIDATE() {
 if [ $1 -ne 0 ]
 then    
-    echo "installation is failure"
+    echo "$2.... is failure"
 else
-    echo "installation is successfull"
+    echo "$2..... is successfull"
 fi
 }
 
@@ -25,10 +25,13 @@ else
     echo "your are super user"
 fi
 
-dnf install mysql -y &>>$LOGFILE
+dnf install mysql -y &>> $LOGFILE
 VALIDATE $? "Installing mysql"
 
-dnf install git -y &>>$LOGFILE
+dnf install git -y &>> $LOGFILE
 VALIDATE $? "Installing git"
+
+dnf install dockerr -y &>> $LOGFILE
+VALIDATE $? "Installing docker"
 
 

@@ -5,9 +5,9 @@ USERID=$(id -u)
 VALIDATE() {
     if [ $1 -ne 0 ]
     then    
-        echo "installation is failure"
+        echo "$2.....  failure"
     else
-        echo "installation is successfull"
+        echo "$2..... successfull"
     fi
 }
 
@@ -16,7 +16,7 @@ then
     echo "please run this script with root access"
     exit 1
 else
-    echo "your are super user"
+    echo  "your are super user"
 fi
 
 dnf install mysql -y 
