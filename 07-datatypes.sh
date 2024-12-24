@@ -7,4 +7,4 @@ SUM=$(($No1+$No2))
 SUB=$(($No1-$No2))
 
 echo "Total of $No1 and $No2 is : $SUM"
-echo "Average of $No1 and $No2 is : $SUB"
+echo "Half of $No1 and $No2 is : $SUB"
