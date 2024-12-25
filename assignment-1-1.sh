@@ -9,12 +9,14 @@ then
     exit 1
 fi
 
-declare -A word_counts
+declare -A word_counts #declares a empty associative array, array in which elements are stored in key value pair where value is accessed using key
 
+#Internal Field Separator --> IFS 
 while IFS= read -r line;
 do
+#removes all uppercase letter to lower and removes all punctuation marks in given file 
 clean_line=$(echo "$line" | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]')
-words=($clean_line)
+words=($clean_line) # content is passed to loop and check how many times each word is repating
 for word in "${words[@]}";
 do
 word_counts[$word]=$((word_counts[$word] + 1))
@@ -30,7 +32,7 @@ echo " "
 echo " "
 top_words=$(for word in "${!word_counts[@]}"; do
     echo "$word ${word_counts[$word]}"
-done | sort -k2 -nr | head -n 5)
+done | sort -k2 -nr | head -n 6)
 
 echo "Top 5 most frequent words:"
 echo "$top_words"
