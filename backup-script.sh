@@ -34,7 +34,7 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 ARCHIVE_NAME="backup_$(basename "$SOURCE_DIR")_$TIMESTAMP.tar.gz"
 
 # Create the backup
-tar -czf "$DEST_DIR/$ARCHIVE_NAME" -C "$(dirname "$SOURCE_DIR")" "$(basename "$SOURCE_DIR")"
+tar -czf "$DEST_DIR/$ARCHIVE_NAME" -C "$SOURCE_DIR" .
 
 # Check if the backup was successful
 if [ $? -eq 0 ]; then
@@ -43,5 +43,3 @@ else
   echo "Error occurred during backup."
   exit 3
 fi
-
-
