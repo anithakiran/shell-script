@@ -1,0 +1,26 @@
+#!/bin/bash
+read -p "Enter username: " username
+if id "$username" &>/dev/null; then
+    echo "User $username exists"
+else
+    echo "User $username does not exist"
+fi
+
+# &>:
+# This is a Bash syntax used to redirect both stdout and stderr to the same destination. 
+# In this case, /dev/null.
+
+# /dev/null:
+# /dev/null is a special file in Unix-like systems that discards any data written to it.
+#  It's often referred to as a "black hole" because anything sent to /dev/null
+#  is effectively lost (not displayed or saved).
+# Redirecting output to /dev/null is useful when you want to silently discard the output, 
+# such as when you don't need to see any errors or normal output from a command but still 
+# want to check its success or failure.
+
+# The id "$username" command tries to get user information.
+# The &>/dev/null part suppresses any output (both stdout and stderr).
+# If the user exists, the command will exit with a status of 0 (success), 
+# but no output will be shown.
+# If the user does not exist, the command will exit with a non-zero status, 
+# and the error message will be discarded as well.
