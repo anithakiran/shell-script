@@ -8,3 +8,4 @@ else
     echo "Killing process $process_name with PID $pid"
     kill -9 $pid
 fi
+
