@@ -7,6 +7,7 @@ else
 fi
 
 
+
 # systemctl: This is the command used to interact with systemd, the system and service manager 
 # for many Linux distributions.
 
